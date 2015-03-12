@@ -46,7 +46,17 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\FireHitAction.cs" />
+     <Compile Include="Assets\Scripts\CameraFollow.cs" />
+     <Compile Include="Assets\Scripts\Characterfinal.cs" />
+     <Compile Include="Assets\Scripts\Characterstart.cs" />
+     <Compile Include="Assets\Scripts\FlipIt.cs" />
+     <Compile Include="Assets\Scripts\Guncarl.cs" />
+     <Compile Include="Assets\Scripts\Pickup.cs" />
+     <Compile Include="Assets\Scripts\PlayerControl.cs" />
+     <Compile Include="Assets\Scripts\Respawn.cs" />
+     <Compile Include="Assets\Scripts\Rocket.cs" />
+     <Compile Include="Assets\Scripts\SetParticleSortingLayer.cs" />
+     <Compile Include="Assets\Scripts\youwin.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/4.6.2/UnityEngine.UI.dll</HintPath>
  </Reference>
