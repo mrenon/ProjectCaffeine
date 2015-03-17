@@ -59,7 +59,7 @@ public class Characterstart : MonoBehaviour
 		// if game is started we move character forward...
 		if (gamestarted == true) 
 		{
-		rigidbody2D.velocity = new Vector2( 10 , rigidbody2D.velocity.y  );
+		GetComponent<Rigidbody2D>().velocity = new Vector2( 10 , GetComponent<Rigidbody2D>().velocity.y  );
 		}
 
 		// If jump is set to true we are now adding quickly aforce to push the character up
@@ -67,7 +67,7 @@ public class Characterstart : MonoBehaviour
 		{
 		
 			// Add a vertical force to the player.
-			rigidbody2D.AddForce(new Vector2(0f, jumpForce));
+			GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, jumpForce));
 
 			// We set to false otherwise the ridig2D addforce would keep adding force
 			jump = false;

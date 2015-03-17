@@ -14,7 +14,7 @@ public class Pickup : MonoBehaviour
 		if(col.gameObject.tag == "mushroom")
 		
 		{
-			audio.PlayOneShot(CollectSound);
+			GetComponent<AudioSource>().PlayOneShot(CollectSound);
 			Instantiate (particle, col.transform.position, col.transform.rotation );
 			Destroy (col.gameObject);	
 			score++;

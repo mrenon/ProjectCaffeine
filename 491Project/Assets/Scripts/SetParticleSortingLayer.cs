@@ -10,6 +10,6 @@ public class SetParticleSortingLayer : MonoBehaviour
 	{
 		// Set the sorting layer of the particle system.
 		//particleSystem.renderer.sortingLayerName = sortingLayerName;
-		gameObject.renderer.sortingLayerName = sortingLayerName;
+		gameObject.GetComponent<Renderer>().sortingLayerName = sortingLayerName;
 	}
 }
