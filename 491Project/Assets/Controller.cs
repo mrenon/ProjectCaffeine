@@ -5,11 +5,13 @@ public class Controller : MonoBehaviour {
 	
 	public float maxSpeed;
 	public bool facingRight = false;
+	public bool facingUp = false;
 	
 	// Update is called once per frame
 	void Update () {
 		
 		float h = Input.GetAxis("Horizontal");
+		float v = Input.GetAxis ("Vertical");
 		
 		if (Input.GetKey("left")){
 			transform.Translate(-maxSpeed * Time.deltaTime,0,0);
@@ -24,13 +26,11 @@ public class Controller : MonoBehaviour {
 			transform.Translate(0, -maxSpeed * Time.deltaTime,0);
 		}
 		
-		if(h > 0 && !facingRight)
-			Flip();
-		
+		if (h > 0 && !facingRight) 
+			Flip ();
+
 		else if(h < 0 && facingRight)
 			Flip();
-		
-		
 		
 	}
 	
@@ -44,4 +44,5 @@ public class Controller : MonoBehaviour {
 		theScale.x *= -1;
 		transform.localScale = theScale;
 	}
+
 }
