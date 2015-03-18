@@ -52,6 +52,7 @@
      <Compile Include="Assets\Scripts\Characterstart.cs" />
      <Compile Include="Assets\Scripts\Control.cs" />
      <Compile Include="Assets\Scripts\EnemySpawn.cs" />
+     <Compile Include="Assets\Scripts\FartSpawn.cs" />
      <Compile Include="Assets\Scripts\FlipIt.cs" />
      <Compile Include="Assets\Scripts\Guncarl.cs" />
      <Compile Include="Assets\Scripts\Health.cs" />
@@ -62,6 +63,7 @@
      <Compile Include="Assets\Scripts\SetParticleSortingLayer.cs" />
      <Compile Include="Assets\Scripts\SpawnBubble.cs" />
      <Compile Include="Assets\Scripts\SpawnFish.cs" />
+     <Compile Include="Assets\Scripts\SpawnFromLeft.cs" />
      <Compile Include="Assets\Scripts\Spawner.cs" />
      <Compile Include="Assets\Scripts\Timer.cs" />
      <Compile Include="Assets\Scripts\youwin.cs" />
