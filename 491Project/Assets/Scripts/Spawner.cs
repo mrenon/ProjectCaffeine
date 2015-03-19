@@ -46,7 +46,7 @@ public class Spawner : MonoBehaviour {
 			if(gameObjPool[i].activeSelf == true && screenPt.x < 0){
 				resetObject(gameObjPool[i]);
 			}
-
+				
 			// Right border
 			if(gameObjPool[i].activeSelf == true && screenPt.x == 0){
 				resetObject(gameObjPool[i]);
