@@ -16,6 +16,8 @@ public class Spawner : MonoBehaviour {
 	public float spawningOffsetTop = 0f;
 	public float spawningOffsetBottom = 0f;
 
+
+
 	// Use this for initialization
 	void Start () {
 

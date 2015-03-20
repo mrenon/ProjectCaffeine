@@ -6,7 +6,10 @@ public class Controller : MonoBehaviour {
 	public float maxSpeed;
 	public bool facingRight = false;
 	public bool facingUp = false;
-	
+
+	//Animator anim = GetComponent<Animator>();
+
+
 	// Update is called once per frame
 	void Update () {
 		
@@ -20,9 +23,13 @@ public class Controller : MonoBehaviour {
 			transform.Translate(maxSpeed * Time.deltaTime,0,0);
 		}
 		if (Input.GetKey("up")){
+			//anim.SetBool("swimUp", true)
+			//bool swimUp = anim.GetBool("swimUp");
 			transform.Translate(0, maxSpeed * Time.deltaTime,0);
 		}
 		if (Input.GetKey("down")){
+			//anim.SetBool("swimDown", true)
+			//bool swimDown = anim.GetBool("swimDown");
 			transform.Translate(0, -maxSpeed * Time.deltaTime,0);
 		}
 		
