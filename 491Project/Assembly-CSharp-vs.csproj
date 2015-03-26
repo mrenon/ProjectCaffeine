@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Controller.cs" />
+     <Compile Include="Assets\FillAir.cs" />
      <Compile Include="Assets\Scripts\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\Characterfinal.cs" />
      <Compile Include="Assets\Scripts\Characterstart.cs" />
@@ -65,6 +66,7 @@
      <Compile Include="Assets\Scripts\ShotScript.cs" />
      <Compile Include="Assets\Scripts\SpawnBubble.cs" />
      <Compile Include="Assets\Scripts\SpawnFish.cs" />
+     <Compile Include="Assets\Scripts\SpawnFishLeftToRight.cs" />
      <Compile Include="Assets\Scripts\SpawnFromLeft.cs" />
      <Compile Include="Assets\Scripts\Spawner.cs" />
      <Compile Include="Assets\Scripts\Timer.cs" />
