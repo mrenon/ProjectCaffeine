@@ -13,7 +13,9 @@ public class HealthScript : MonoBehaviour {
 		if (shot != null) {
 			if (shot.isEnemyShot != isEnemy) {
 				hp -= shot.damage;
+				shot.fish = shot.fish+1;
 				//Destroy (shot.gameObject);
+
 
 				if (hp <= 0) {
 					Destroy (gameObject);

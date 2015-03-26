@@ -3,6 +3,7 @@ using System.Collections;
 
 public class ShotScript : MonoBehaviour {
 
+	public int fish = 0;
 	public int damage = 1;
 	public bool isEnemyShot = false;
 

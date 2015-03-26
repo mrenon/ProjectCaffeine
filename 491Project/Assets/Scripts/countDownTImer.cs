@@ -16,7 +16,7 @@ public class countDownTImer : MonoBehaviour {
 
 	void OnGUI() {
 		if (timeRemaining > 0) {
-			GUI.Label (new Rect (150, 50, 150, 100), "" + (int) timeRemaining);
+			GUI.Label (new Rect (170, 35, 150, 100), "" + (int) timeRemaining);
 		} else {
 			if(score >= 100) { // if player score is over 100pts.  we can change the score player has to reach later
 				GUI.Label (new Rect (250, 300, 150, 100), "YOU WIN!");
