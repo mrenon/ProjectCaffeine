@@ -68,6 +68,7 @@
      <Compile Include="Assets\Scripts\SpawnFromLeft.cs" />
      <Compile Include="Assets\Scripts\Spawner.cs" />
      <Compile Include="Assets\Scripts\Timer.cs" />
+     <Compile Include="Assets\Scripts\UrchinHealth.cs" />
      <Compile Include="Assets\Scripts\countDownTImer.cs" />
      <Compile Include="Assets\Scripts\youwin.cs" />
  <Reference Include="UnityEngine.UI">
