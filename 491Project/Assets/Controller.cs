@@ -6,6 +6,7 @@ public class Controller : MonoBehaviour {
 	public float maxSpeed;
 	public bool facingRight = false;
 	public bool facingUp = false;
+	public RectTransform healthTransform;
 	
 	// Update is called once per frame
 	void Update () {
