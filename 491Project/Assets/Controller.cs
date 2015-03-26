@@ -63,7 +63,7 @@ public class Controller : MonoBehaviour {
 			if(!onCD && currentHealth > 0)
 			{
 				StartCoroutine(CoolDownDmg());
-				CurrentHealth -= 10;
+				CurrentHealth -= 15;
 			}
 			
 		}
@@ -78,7 +78,7 @@ public class Controller : MonoBehaviour {
 	
 	void OnCollisionEnter2D(Collision2D col)
 	{
-		if (col.gameObject.tag == "AirBar") {
+		if (col.gameObject.tag == "air") {
 			currentHealth = maxHealth;
 		}
 		if (col.gameObject.tag == "urchin") {

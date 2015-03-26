@@ -3,22 +3,19 @@ using System.Collections;
 
 public class FillAir : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
-	void OnTriggerEnter2D(Collision2D col)
-	{
-		Controller cont = GetComponent<Collider>().gameObject.GetComponent<Controller>();
-		if (cont.gameObject.tag == "Player") {
+	void OnTriggerEnter2D(Collider2D collider) {
+		Controller cont = collider.gameObject.GetComponent<Controller>();
+		
+		if (cont != null || cont.tag == "Player") {
 			cont.currentHealth = cont.maxHealth;
-			
+		}
+	}
+	
+	void OnCollisionEnter2D(Collision2D col)
+	{
+		if (col.gameObject.tag == "fish") {
+			Destroy (col.gameObject);
+			//	fishTotal = fishTotal + 1;
 		}
 	}
 }
