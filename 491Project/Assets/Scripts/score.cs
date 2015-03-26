@@ -25,7 +25,46 @@ public class score : MonoBehaviour {
 		
 		if (shot != null || shot.tag == "fish") {
 			Destroy (shot.gameObject);
-			fishTotal = fishTotal + shot.fish;
+			if(shot.fish == 0) {
+				fishTotal = fishTotal + (shot.fish * 0);
+				//animation change to Fishx1
+			}
+			else if(shot.fish == 1) {
+				fishTotal = fishTotal + (shot.fish * 1);
+				//animation change to Fishx2
+			}
+			else if(shot.fish == 2) {
+				fishTotal = fishTotal + (shot.fish * 2);
+				//animation change to Fishx3
+			}
+			else if(shot.fish == 3) {
+				fishTotal = fishTotal + (shot.fish * 3);
+				//animation change to Fishx4
+			}
+			else if(shot.fish == 4) {
+				fishTotal = fishTotal + (shot.fish * 3);
+				//animation change to Fishx5
+			}
+			else if(shot.fish == 5) {
+				fishTotal = fishTotal + (shot.fish * 5);
+				//animation change to Fishx6
+			}
+			else if(fishTotal == 6) {
+				fishTotal = fishTotal + (shot.fish * 6);
+				//animation change to Fishx7
+			}
+			else if(fishTotal == 7) {
+				fishTotal = fishTotal + (shot.fish * 7);
+				//animation change to Fishx8
+			}
+			else if(fishTotal == 8) {
+				fishTotal = fishTotal + (shot.fish * 8);
+				//animation change to Fishx9
+			}
+			else if(fishTotal == 9) {
+				fishTotal = fishTotal + (shot.fish * 9);
+				//animation change to Fishx10
+			}
 		}
 		
 	}
