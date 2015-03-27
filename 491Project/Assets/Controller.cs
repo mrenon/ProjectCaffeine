@@ -63,7 +63,7 @@ public class Controller : MonoBehaviour {
 			if(!onCD && currentHealth > 0)
 			{
 				StartCoroutine(CoolDownDmg());
-				CurrentHealth -= 15;
+				CurrentHealth -= 5;
 			}
 			
 		}
