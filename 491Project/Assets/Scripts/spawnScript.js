@@ -11,6 +11,7 @@ function Start() {
     InvokeRepeating("addEnemy", number, number);
 }
 
+
 function FixedUpdate() {
 	number = Random.Range(8,12);
 }
