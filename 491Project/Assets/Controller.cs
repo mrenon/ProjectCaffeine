@@ -79,7 +79,12 @@ public class Controller : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D col)
 	{
 		if (col.gameObject.tag == "air") {
-			currentHealth = maxHealth;
+			if(!onCD && currentHealth > 0)
+			{
+				StartCoroutine(CoolDownDmg());
+				Destroy (col.gameObject);
+					CurrentHealth += 5;
+			}
 		}
 		if (col.gameObject.tag == "urchin") {
 			if(!onCD && currentHealth > 0)
