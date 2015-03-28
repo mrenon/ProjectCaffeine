@@ -5,7 +5,6 @@ public class FartSpawn : MonoBehaviour {
 
 	public Vector3 ObjectSpawnPosition;
 	public GameObject obj;
-	//public GameObject Player;
 	
 	void Update(){
 		ObjectSpawnPosition = GameObject.FindWithTag("Player").transform.position;
@@ -14,5 +13,6 @@ public class FartSpawn : MonoBehaviour {
 			Instantiate(obj, ObjectSpawnPosition, Quaternion.identity);
 		}
 	}
+
 }
 

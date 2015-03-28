@@ -29,6 +29,7 @@ public class Controller : MonoBehaviour {
 	private bool onCD;
 	public Canvas canvas;
 	public Renderer renderer;
+	public AudioSource fart;
 
 	void Start()
 	{
@@ -60,7 +61,7 @@ public class Controller : MonoBehaviour {
 		}
 		
 		if (Input.GetKeyDown (KeyCode.Space)) {
-			
+			fart.Play();
 			if(!onCD && currentHealth > 0)
 			{
 				StartCoroutine(CoolDownDmg());
