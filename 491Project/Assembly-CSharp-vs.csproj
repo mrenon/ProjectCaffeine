@@ -71,6 +71,7 @@
      <Compile Include="Assets\Scripts\Spawner.cs" />
      <Compile Include="Assets\Scripts\Timer.cs" />
      <Compile Include="Assets\Scripts\UrchinHealth.cs" />
+     <Compile Include="Assets\Scripts\WhaleAnimationChange.cs" />
      <Compile Include="Assets\Scripts\countDownTImer.cs" />
      <Compile Include="Assets\Scripts\score.cs" />
      <Compile Include="Assets\Scripts\youwin.cs" />
