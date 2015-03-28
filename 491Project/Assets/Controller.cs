@@ -28,7 +28,8 @@ public class Controller : MonoBehaviour {
 	public float coolDown;
 	private bool onCD;
 	public Canvas canvas;
-	
+	public Renderer renderer;
+
 	void Start()
 	{
 		onCD = false;
@@ -87,6 +88,7 @@ public class Controller : MonoBehaviour {
 			}
 		}
 		if (col.gameObject.tag == "urchin") {
+			BlinkPlayer();
 			if(!onCD && currentHealth > 0)
 			{
 				StartCoroutine(CoolDownDmg());
@@ -107,6 +109,22 @@ public class Controller : MonoBehaviour {
 		{
 			visualHealth.color = new Color32(255, (byte)MapValues(currentHealth, 0, maxHealth/2, 0, 255), 0, 255);
 		}
+	}
+
+	void BlinkPlayer()
+	{
+		StartCoroutine (DoBlinks (10f, 0.05f));
+	}
+
+	IEnumerator DoBlinks(float duration, float blinkTime)
+	{
+		while (duration > 0f) {
+			duration -= Time.deltaTime;
+		}
+		renderer.enabled = !renderer.enabled;
+		yield return new WaitForSeconds(blinkTime);
+		renderer.enabled = true;
+		
 	}
 	
 	IEnumerator CoolDownDmg()
