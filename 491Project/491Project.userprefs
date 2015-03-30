@@ -1,6 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/countDownTImer.cs">
+    <Files>
+      <File FileName="Assets/Controller.cs" Line="86" Column="35" />
+      <File FileName="Assets/Scripts/FartSpawn.cs" Line="7" Column="24" />
+      <File FileName="Assets/Scripts/spawnScript.js" Line="16" Column="27" />
+      <File FileName="Assets/Scripts/countDownTImer.cs" Line="5" Column="26" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
