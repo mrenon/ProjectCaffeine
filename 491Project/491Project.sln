@@ -27,6 +27,9 @@ Global
 =======
 																																																																																		GlobalSection(MonoDevelopProperties) = preSolution
 >>>>>>> origin/David
+=======
+																																																																																				GlobalSection(MonoDevelopProperties) = preSolution
+>>>>>>> Stashed changes
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1

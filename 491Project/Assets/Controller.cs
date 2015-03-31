@@ -43,6 +43,7 @@ public class Controller : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
 		
 		float h = Input.GetAxis("Horizontal");
 		float v = Input.GetAxis ("Vertical");
@@ -80,6 +81,11 @@ public class Controller : MonoBehaviour {
 	
 	void OnCollisionEnter2D(Collision2D col)
 	{
+		///if (col.gameObject.tag == "fish") {
+		//	Transform Controller = new Controller();
+		//	Physics2D.IgnoreCollision(Controller.GetComponent<Collider2D>(), col.collider);
+		//}
+
 		if (col.gameObject.tag == "air") {
 			if(!onCD && currentHealth > 0)
 			{
@@ -94,7 +100,9 @@ public class Controller : MonoBehaviour {
 			{
 				StartCoroutine(CoolDownDmg());
 				CurrentHealth -= 10;
+				Destroy (col.gameObject);
 			}
+			//Destroy (col.gameObject);
 		}
 	}
 	private void HandleHealth()
