@@ -12,6 +12,8 @@ public class countDownTImer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+
 		timeRemaining -= Time.deltaTime;
 		Controller cont = GetComponent<Collider>().gameObject.GetComponent<Controller>();
 		if (cont.currentHealth <= 0) {

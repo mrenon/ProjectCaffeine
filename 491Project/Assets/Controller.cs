@@ -32,7 +32,11 @@ public class Controller : MonoBehaviour {
 	public AudioSource fart;
 	public AudioSource hurtWhale;
 
-
+	void OnGUI() {
+		if (currentHealth <= 0) {
+			GUI.Label (new Rect (300, 400, 150, 100), "GAME OVER!");
+		}
+	}
 	void Start()
 	{
 		onCD = false;
@@ -46,6 +50,9 @@ public class Controller : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+		if (currentHealth <= 0) {
+			GUI.Label (new Rect (350, 350, 150, 100), "GAME OVER!");
+		}
 		
 		float h = Input.GetAxis("Horizontal");
 		float v = Input.GetAxis ("Vertical");
