@@ -46,15 +46,15 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Controller.cs" />
-     <Compile Include="Assets\DestroyAir.cs" />
-     <Compile Include="Assets\FillAir.cs" />
      <Compile Include="Assets\Scripts\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\Characterfinal.cs" />
      <Compile Include="Assets\Scripts\Characterstart.cs" />
      <Compile Include="Assets\Scripts\Control.cs" />
+     <Compile Include="Assets\Scripts\Controller.cs" />
+     <Compile Include="Assets\Scripts\DestroyAir.cs" />
      <Compile Include="Assets\Scripts\EnemySpawn.cs" />
      <Compile Include="Assets\Scripts\FartSpawn.cs" />
+     <Compile Include="Assets\Scripts\FillAir.cs" />
      <Compile Include="Assets\Scripts\FlipIt.cs" />
      <Compile Include="Assets\Scripts\Guncarl.cs" />
      <Compile Include="Assets\Scripts\Health.cs" />
