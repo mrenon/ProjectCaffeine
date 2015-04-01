@@ -25,8 +25,9 @@ public class FartAnimChange : MonoBehaviour {
 		}
 	}
 
-	void OnCollisionEnter2D(Collision2D col){
-		if (col.gameObject.tag == "fish") {//if fart hits a fish
+	void OnTriggerEnter2D(Collider2D fart){
+		if (fart.gameObject.tag == "fish") {//if fart hits a fish
+			print ("fish hit");
 			fishCounter++;
 		}
 	}
