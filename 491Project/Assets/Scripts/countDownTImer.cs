@@ -15,7 +15,7 @@ public class countDownTImer : MonoBehaviour {
 
 
 		timeRemaining -= Time.deltaTime;
-		Controller cont = GetComponent<Collider>().gameObject.GetComponent<Controller>();
+		Controller cont = gameObject.GetComponent<Controller>();
 		if (cont.currentHealth <= 0) {
 			GUI.Label (new Rect (250, 300, 150, 100), "GAME OVER!");
 		}
