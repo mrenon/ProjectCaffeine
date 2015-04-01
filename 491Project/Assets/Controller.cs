@@ -107,7 +107,7 @@ public class Controller : MonoBehaviour {
 			}
 		}
 		if (col.gameObject.tag == "urchin") {
-
+			hurtWhale.Play();
 					StartCoroutine (CoolDownDmg ());
 					CurrentHealth -= 10;
 			BlinkPlayer();
