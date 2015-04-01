@@ -50,8 +50,11 @@ public class Controller : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+
 		if (currentHealth <= 0) {
-			GUI.Label (new Rect (350, 350, 150, 100), "GAME OVER!");
+			GUIStyle myStyle = new GUIStyle();
+			myStyle.fontSize = 100;
+			GUI.Label (new Rect (350, 350, 150, 100), "GAME OVER!", myStyle);
 		}
 		
 		float h = Input.GetAxis("Horizontal");
