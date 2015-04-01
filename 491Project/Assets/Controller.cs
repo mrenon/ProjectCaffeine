@@ -87,27 +87,28 @@ public class Controller : MonoBehaviour {
 		//	Transform Controller = new Controller();
 		//	Physics2D.IgnoreCollision(Controller.GetComponent<Collider2D>(), col.collider);
 		//}
-
+		
 		if (col.gameObject.tag == "air") {
-			if(!onCD && currentHealth > 0)
-			{
-				StartCoroutine(CoolDownDmg());
-				Destroy (col.gameObject);
-					CurrentHealth += 5;
+			if (!onCD && currentHealth > 0) {
+
+				{
+					StartCoroutine (CoolDownDmg ());
+					CurrentHealth += 10;
+					Destroy (col.gameObject);
+				}
+				//Destroy (col.gameObject);
 			}
 		}
 		if (col.gameObject.tag == "urchin") {
-			hurtWhale.Play ();
-			BlinkPlayer();
-			if(!onCD && currentHealth > 0)
-			{
-				StartCoroutine(CoolDownDmg());
-				CurrentHealth -= 10;
-				Destroy (col.gameObject);
-			}
-			//Destroy (col.gameObject);
+
+					StartCoroutine (CoolDownDmg ());
+					CurrentHealth -= 10;
+					Destroy (col.gameObject);
+
 		}
 	}
+
+
 	private void HandleHealth()
 	{
 		healthText.text = "Air: " + currentHealth;
