@@ -1,11 +1,21 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/DestroyAir.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UrchinHealth.cs">
     <Files>
+<<<<<<< HEAD
+      <File FileName="Assets/Scripts/FartAnimChange.cs" Line="37" Column="1" />
+      <File FileName="Assets/Scripts/DestroyAir.cs" Line="21" Column="4" />
+      <File FileName="Assets/Scripts/Controller.cs" Line="179" Column="1" />
+      <File FileName="Assets/Scripts/HealthScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/UrchinHealth.cs" Line="35" Column="1" />
+      <File FileName="Assets/Scripts/countDownTImer.cs" Line="35" Column="2" />
+      <File FileName="Assets/Scripts/score.cs" Line="82" Column="53" />
+=======
       <File FileName="Assets/Scripts/leftrightbottom.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/UrchinHealth.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/DestroyAir.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Controller.cs" Line="109" Column="28" />
+>>>>>>> origin/David
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
