@@ -31,6 +31,7 @@ public class Controller : MonoBehaviour {
 	public Renderer renderer;
 	public AudioSource fart;
 	public AudioSource hurtWhale;
+	public AudioSource eatBubble;
 
 	void OnGUI() {
 		if (currentHealth <= 0) {
@@ -99,6 +100,7 @@ public class Controller : MonoBehaviour {
 		//}
 		
 		if (col.gameObject.tag == "air") {
+			eatBubble.Play ();
 			if (!onCD && currentHealth > 0) {
 
 				{

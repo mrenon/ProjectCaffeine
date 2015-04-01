@@ -5,11 +5,13 @@ public class UrchinHealth : MonoBehaviour {
 
 	public int hp = 1000;
 	public bool isEnemy = true;
+	public AudioSource fartPop;
 	
 	void OnTriggerEnter2D(Collider2D collider) {
 		ShotScript shot = collider.gameObject.GetComponent<ShotScript>();
 
 		if (shot != null || shot.tag == "fish") {
+			fartPop.Play();
 			Destroy (shot.gameObject);
 		}
 
