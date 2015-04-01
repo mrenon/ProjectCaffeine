@@ -30,6 +30,8 @@ public class Controller : MonoBehaviour {
 	public Canvas canvas;
 	public Renderer renderer;
 	public AudioSource fart;
+	public AudioSource hurtWhale;
+
 
 	void Start()
 	{
@@ -95,6 +97,7 @@ public class Controller : MonoBehaviour {
 			}
 		}
 		if (col.gameObject.tag == "urchin") {
+			hurtWhale.Play ();
 			BlinkPlayer();
 			if(!onCD && currentHealth > 0)
 			{

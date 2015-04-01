@@ -73,6 +73,7 @@ public class score : MonoBehaviour {
 	{
 		if (col.gameObject.tag == "fish") {
 			Destroy (col.gameObject);
+
 		//	fishTotal = fishTotal + 1;
 		}
 	}

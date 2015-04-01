@@ -9,7 +9,9 @@ public class ShotScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		//fishPoint.Play();
 		Destroy (gameObject, 8);
 	}
+
 
 }
