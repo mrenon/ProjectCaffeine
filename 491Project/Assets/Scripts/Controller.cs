@@ -35,7 +35,7 @@ public class Controller : MonoBehaviour {
 
 	void OnGUI() {
 		if (currentHealth <= 0) {
-			GUI.Label (new Rect (300, 400, 150, 100), "GAME OVER. NO AIR!");
+			GUI.Label (new Rect (170, 280, 150, 100), "GAME OVER. NO AIR!");
 		}
 	}
 	void Start()
