@@ -90,7 +90,7 @@ public class Controller : MonoBehaviour {
 			Flip();
 		
 	}
-	
+
 	void OnCollisionEnter2D(Collision2D col)
 	{
 		///if (col.gameObject.tag == "fish") {

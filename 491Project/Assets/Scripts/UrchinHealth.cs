@@ -5,6 +5,10 @@ public class UrchinHealth : MonoBehaviour {
 
 	public int hp = 1000;
 	public bool isEnemy = true;
+
+	void Update() {
+		GetComponent<Collider>().enabled = true;
+	}
 	
 	void OnTriggerEnter2D(Collider2D collider) {
 		ShotScript shot = collider.gameObject.GetComponent<ShotScript>();
