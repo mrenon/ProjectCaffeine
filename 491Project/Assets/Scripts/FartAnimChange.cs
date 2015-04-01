@@ -7,6 +7,7 @@ public class FartAnimChange : MonoBehaviour {
 	bool hitFish; 
 	bool moreThanOne;
 	int fishCounter;
+
 	// Use this for initialization
 	void Start () {
 	
