@@ -3,17 +3,17 @@ public var enemy : GameObject;
 
 // Variable to know how fast we should create new enemies
 public var spawnTime : float = 0;
-var number = Random.Range(3,8);
+var number = Random.Range(5,9);
 
 function Start() {  
     // Call the 'addEnemy' function every 'spawnTime' seconds
-    number = Random.Range(3,8);
+    number = Random.Range(5,9);
     InvokeRepeating("addEnemy", number, number);
 }
 
 
 function FixedUpdate() {
-	number = Random.Range(3,8);
+	number = Random.Range(5,9);
 }
 
 // New function to spawn an enemy
