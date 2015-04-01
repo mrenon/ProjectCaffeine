@@ -1,17 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/countDownTImer.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Controller.cs">
     <Files>
-<<<<<<< HEAD
-      <File FileName="Assets/Scripts/countDownTImer.cs" Line="35" Column="2" />
-      <File FileName="Assets/Controller.cs" Line="37" Column="31" />
-      <File FileName="Assets/Scripts/spawnScript.js" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/SpawnFromLeft.cs" Line="8" Column="18" />
-=======
-      <File FileName="Assets/Controller.cs" Line="166" Column="1" />
+      <File FileName="Assets/Controller.cs" Line="103" Column="6" />
       <File FileName="Assets/Scripts/HealthScript.cs" Line="27" Column="3" />
-      <File FileName="Assets/Scripts/ShotScript.cs" Line="8" Column="34" />
->>>>>>> origin/David
+      <File FileName="Assets/Scripts/ShotScript.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
