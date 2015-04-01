@@ -18,8 +18,8 @@ public class HealthScript : MonoBehaviour {
 				//Destroy (shot.gameObject);
 
 				if (hp <= 0) {
-					Destroy (gameObject);
 					fishPoint.Play();
+					Destroy (gameObject);
 					}
 				}
 			}
