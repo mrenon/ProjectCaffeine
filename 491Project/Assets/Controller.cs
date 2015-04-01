@@ -110,6 +110,7 @@ public class Controller : MonoBehaviour {
 
 					StartCoroutine (CoolDownDmg ());
 					CurrentHealth -= 10;
+			BlinkPlayer();
 					Destroy (col.gameObject);
 
 		}
