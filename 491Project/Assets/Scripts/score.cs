@@ -79,6 +79,6 @@ public class score : MonoBehaviour {
 	}
 
 	void OnGUI() {
-		GUI.Label (new Rect (250, 300, 150, 100), "SCORE: " + fishTotal);
+		GUI.Label (new Rect (350, 50, 150, 100), "SCORE: " + fishTotal);
 	}
 }
