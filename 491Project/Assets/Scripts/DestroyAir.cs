@@ -19,5 +19,13 @@ public class DestroyAir : MonoBehaviour {
 			Destroy (col.gameObject);
 			//	fishTotal = fishTotal + 1;
 		}
+
+		if (col.gameObject.tag == "fish") {
+			Destroy (col.gameObject);
+		}
+
+		if (col.gameObject.tag == "urchin") {
+			Destroy (col.gameObject);
+		}
 	}
 }

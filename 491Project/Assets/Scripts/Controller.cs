@@ -35,7 +35,7 @@ public class Controller : MonoBehaviour {
 
 	void OnGUI() {
 		if (currentHealth <= 0) {
-			GUI.Label (new Rect (300, 400, 150, 100), "GAME OVER!");
+			GUI.Label (new Rect (300, 400, 150, 100), "GAME OVER. NO AIR!");
 		}
 	}
 	void Start()
@@ -55,7 +55,7 @@ public class Controller : MonoBehaviour {
 		if (currentHealth <= 0) {
 			GUIStyle myStyle = new GUIStyle();
 			myStyle.fontSize = 100;
-			GUI.Label (new Rect (350, 350, 150, 100), "GAME OVER!", myStyle);
+			GUI.Label (new Rect (350, 350, 150, 100), "GAME OVER. NO AIR!", myStyle);
 		}
 		
 		float h = Input.GetAxis("Horizontal");
