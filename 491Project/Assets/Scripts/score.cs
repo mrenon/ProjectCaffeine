@@ -3,7 +3,7 @@ using System.Collections;
 
 public class score : MonoBehaviour {
 
-	int fishTotal = 0;
+	public int fishTotal = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -27,6 +27,7 @@ public class score : MonoBehaviour {
 			Destroy (shot.gameObject);
 			if(shot.fish == 0) {
 				fishTotal = fishTotal + (shot.fish * 0);
+
 				//animation change to Fishx1
 			}
 			else if(shot.fish == 1) {

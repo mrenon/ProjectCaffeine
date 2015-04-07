@@ -12,6 +12,9 @@ public class Controller : MonoBehaviour {
 	private float minXValue;
 	private float maxXvalue;
 	public int currentHealth;
+	float timeRemaining = 70;
+	public int score; // player score
+	bool turnOffTimer = true;
 	
 	private int CurrentHealth
 	{
@@ -34,8 +37,28 @@ public class Controller : MonoBehaviour {
 	public AudioSource eatBubble;
 
 	void OnGUI() {
+
+			if (turnOffTimer) {
+			if (timeRemaining > 0) {
+				GUI.Label (new Rect (125, 30, 150, 100), "" + (int)timeRemaining);
+			} else {
+				GUIStyle myStyle = new GUIStyle();
+				myStyle.fontSize = 40;
+				if (score >= 100) { // if player score is over 100pts.  we can change the score player has to reach later
+					GUI.Label (new Rect (140, 330, 150, 100), "YOU WIN!", myStyle);
+				} else {
+					GUI.Label (new Rect (120, 330, 150, 100), "GAME OVER!", myStyle);
+
+				}
+				GUI.Label (new Rect (140, 280, 150, 100), "TIMES UP!", myStyle);
+			}
+		}
+
 		if (currentHealth <= 0) {
-			GUI.Label (new Rect (170, 280, 150, 100), "GAME OVER. NO AIR!");
+			GUIStyle myStyle = new GUIStyle();
+			myStyle.fontSize = 40;
+			turnOffTimer = false;
+			GUI.Label (new Rect (38, 280, 150, 100), "GAME OVER. NO AIR!", myStyle);
 		}
 	}
 	void Start()
@@ -57,7 +80,13 @@ public class Controller : MonoBehaviour {
 			myStyle.fontSize = 100;
 			GUI.Label (new Rect (350, 350, 150, 100), "GAME OVER. NO AIR!", myStyle);
 		}
-		
+
+		timeRemaining -= Time.deltaTime;
+		Controller cont = gameObject.GetComponent<Controller>();
+		if (cont.currentHealth <= 0) {
+			GUI.Label (new Rect (250, 300, 150, 100), "GAME OVER!");
+		}
+
 		float h = Input.GetAxis("Horizontal");
 		float v = Input.GetAxis ("Vertical");
 		
