@@ -7,6 +7,7 @@ public class FartAnimChange : MonoBehaviour {
 	bool hitFish; 
 	bool moreThanOne;
 	int fishCounter;
+	public AudioSource fishPoint;
 
 	// Use this for initialization
 	void Start () {
@@ -20,6 +21,7 @@ public class FartAnimChange : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D col){
 		if (col.gameObject.tag == "fish") {//if fart hits a fish
+			fishPoint.Play();
 			print ("fish hit");
 			fishCounter++;
 			if (fishCounter == 1) { //if counter is one change fart to fart with one fish
