@@ -1,0 +1,3 @@
+New sounds for Whale being hurt in Whale_Hurt_SFX folder
+
+Long and short SFX for Bubbles and watery splashing sounds
