@@ -1,9 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/spawnScript.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/leftrightbottom.cs">
     <Files>
+      <File FileName="Assets/Scripts/DestroyAir.cs" Line="7" Column="2" />
       <File FileName="Assets/Scripts/Controller.cs" Line="15" Column="18" />
-      <File FileName="Assets/Scripts/spawnScript.js" Line="30" Column="5" />
+      <File FileName="Assets/Scripts/spawnScript.js" Line="2" Column="1" />
+      <File FileName="Assets/Scripts/leftrightbottom.cs" Line="5" Column="2" />
+      <File FileName="Assets/Scripts/WhaleAnimationChange.cs" Line="45" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
