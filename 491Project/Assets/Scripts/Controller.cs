@@ -15,6 +15,8 @@ public class Controller : MonoBehaviour {
 	float timeRemaining = 70;
 	public int score; // player score
 	bool turnOffTimer = true;
+	bool damaged;
+	public GameObject whale;
 	
 	private int CurrentHealth
 	{
@@ -35,6 +37,11 @@ public class Controller : MonoBehaviour {
 	public AudioSource fart;
 	public AudioSource hurtWhale;
 	public AudioSource eatBubble;
+	public Image redImage;
+	public float flashSpeed = 5f;
+	Color[] colors = new Color[] {Color.white, Color.red, Color.green, Color.blue};
+	private int currentColor,length;
+
 
 	void OnGUI() {
 
@@ -150,14 +157,18 @@ public class Controller : MonoBehaviour {
 				//Destroy (col.gameObject);
 			}
 		}
+		currentColor = 0; //White
+		length = colors.Length;
 		if (col.gameObject.tag == "urchin") {
+			damaged = true;
+			currentColor = (currentColor+1)%length;
+			renderer.material.color = colors[currentColor];
 			hurtWhale.Play();
-					StartCoroutine (CoolDownDmg ());
-					CurrentHealth -= 10;
+			CurrentHealth -= 10;
 			BlinkPlayer();
-					Destroy (col.gameObject);
-
+			Destroy (col.gameObject);
 		}
+		StartCoroutine (CoolDownDmg ());
 	}
 
 
@@ -178,7 +189,7 @@ public class Controller : MonoBehaviour {
 
 	void BlinkPlayer()
 	{
-		StartCoroutine (DoBlinks (10f, 0.05f));
+		StartCoroutine (DoBlinks (10f, 0.1f));
 	}
 
 	IEnumerator DoBlinks(float duration, float blinkTime)
@@ -188,6 +199,20 @@ public class Controller : MonoBehaviour {
 		}
 		renderer.enabled = !renderer.enabled;
 		yield return new WaitForSeconds(blinkTime);
+		renderer.enabled = true; 
+		yield return new WaitForSeconds(blinkTime);
+		renderer.enabled = false; 
+		yield return new WaitForSeconds(blinkTime);
+		renderer.enabled = true; 
+		yield return new WaitForSeconds(blinkTime);
+		renderer.enabled = false; 
+		yield return new WaitForSeconds(blinkTime);
+		renderer.enabled = true;
+		yield return new WaitForSeconds(blinkTime);
+		renderer.enabled = true; 
+		yield return new WaitForSeconds(blinkTime);
+		renderer.enabled = false; 
+		yield return new WaitForSeconds(blinkTime);
 		renderer.enabled = true;
 		
 	}
@@ -195,7 +220,10 @@ public class Controller : MonoBehaviour {
 	IEnumerator CoolDownDmg()
 	{
 		onCD = true;
+		coolDown = 1.0f;
 		yield return new WaitForSeconds(coolDown);
+		currentColor = 0; //White
+		renderer.material.color = colors[currentColor];
 		onCD = false;
 	}
 	private float MapValues(float x, float inMin, float inMax, float outMin, float outMax)
