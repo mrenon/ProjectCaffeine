@@ -16,7 +16,7 @@ public class Controller : MonoBehaviour {
 	public int score; // player score
 	bool turnOffTimer = true;
 	bool damaged;
-	public GameObject whale;
+	public GameObject alert;
 	
 	private int CurrentHealth
 	{
@@ -37,7 +37,6 @@ public class Controller : MonoBehaviour {
 	public AudioSource fart;
 	public AudioSource hurtWhale;
 	public AudioSource eatBubble;
-	public Image redImage;
 	public float flashSpeed = 5f;
 	Color[] colors = new Color[] {Color.white, Color.red, Color.green, Color.blue};
 	private int currentColor,length;
@@ -66,8 +65,9 @@ public class Controller : MonoBehaviour {
 			myStyle.fontSize = 40;
 			turnOffTimer = false;
 			//GUI.Label (new Rect (38, 280, 150, 100), "GAME OVER. NO AIR!", myStyle);
-			Application.LoadLevel(1);
-		} else if (currentHealth > 0 && currentHealth <= 35) {
+			Application.LoadLevel("GameOver");
+		} else if (currentHealth > 0 && currentHealth == 30) {
+			StartCoroutine (DoBlinks2 (2.0f)); 
 			//
 			// RENON!!!!!
 			//  PUT CODE HERE!!!
@@ -78,6 +78,7 @@ public class Controller : MonoBehaviour {
 	}
 	void Start()
 	{
+		alert.SetActive(false);
 		onCD = false;
 		cachedY = healthTransform.position.y;
 		maxXvalue = healthTransform.position.x;
@@ -94,7 +95,10 @@ public class Controller : MonoBehaviour {
 			GUIStyle myStyle = new GUIStyle();
 			myStyle.fontSize = 100;
 			//GUI.Label (new Rect (350, 350, 150, 100), "GAME OVER. NO AIR!", myStyle);
-			Application.LoadLevel(1);
+			Application.LoadLevel("GameOver");
+		}
+		else if (currentHealth > 0 && currentHealth == 30) {
+			StartCoroutine (DoBlinks2 (2.0f)); 
 		}
 
 		timeRemaining -= Time.deltaTime;
@@ -218,6 +222,27 @@ public class Controller : MonoBehaviour {
 		renderer.enabled = true;
 		
 	}
+
+	/*void BlinkAlert()
+	{
+		StartCoroutine (DoBlinks2 (3.0f)); 
+	}*/
+
+	IEnumerator DoBlinks2(float blinkTime)
+	{
+		alert.SetActive(true); 
+		yield return new WaitForSeconds(blinkTime);
+		alert.SetActive(false); 
+		//alert.SetActive(false); 
+		/*yield return new WaitForSeconds(blinkTime);
+		alert.SetActive (true);
+		yield return new WaitForSeconds(blinkTime);
+		alert.SetActive(false); 
+		yield return new WaitForSeconds(blinkTime);
+		alert.SetActive(true);
+		yield return new WaitForSeconds(blinkTime);
+		alert.SetActive(false);*/	
+	}
 	
 	IEnumerator CoolDownDmg()
 	{
@@ -228,6 +253,7 @@ public class Controller : MonoBehaviour {
 		renderer.material.color = colors[currentColor];
 		onCD = false;
 	}
+	
 	private float MapValues(float x, float inMin, float inMax, float outMin, float outMax)
 	{
 		return (x - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
