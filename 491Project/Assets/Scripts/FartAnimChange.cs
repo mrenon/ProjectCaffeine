@@ -6,6 +6,7 @@ public class FartAnimChange : MonoBehaviour {
 	Animator anim;
 	bool hitFish; 
 	bool moreThanOne;
+	bool greenJellyx1;
 	int fishCounter;
 	public AudioSource fishPoint;
 
@@ -34,6 +35,15 @@ public class FartAnimChange : MonoBehaviour {
 				moreThanOne = anim.GetBool ("moreThanOne");
 			}
 			print (fishCounter);
+		}
+		else if (col.gameObject.tag == "jellyfishgreen") {
+			fishPoint.Play();
+			fishCounter++;
+			if(fishCounter == 1){
+				anim = GetComponent<Animator>();
+				anim.SetBool ("greenJellyx1", true);
+				greenJellyx1 = anim.GetBool("greenJellyx1");
+			}
 		}
 	}
 }
