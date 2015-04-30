@@ -65,7 +65,8 @@ public class Controller : MonoBehaviour {
 			GUIStyle myStyle = new GUIStyle ();
 			myStyle.fontSize = 40;
 			turnOffTimer = false;
-			GUI.Label (new Rect (38, 280, 150, 100), "GAME OVER. NO AIR!", myStyle);
+			//GUI.Label (new Rect (38, 280, 150, 100), "GAME OVER. NO AIR!", myStyle);
+			Application.LoadLevel(1);
 		} else if (currentHealth > 0 && currentHealth <= 35) {
 			//
 			// RENON!!!!!
@@ -92,7 +93,8 @@ public class Controller : MonoBehaviour {
 		if (currentHealth <= 0) {
 			GUIStyle myStyle = new GUIStyle();
 			myStyle.fontSize = 100;
-			GUI.Label (new Rect (350, 350, 150, 100), "GAME OVER. NO AIR!", myStyle);
+			//GUI.Label (new Rect (350, 350, 150, 100), "GAME OVER. NO AIR!", myStyle);
+			Application.LoadLevel(1);
 		}
 
 		timeRemaining -= Time.deltaTime;

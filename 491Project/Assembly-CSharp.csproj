@@ -57,9 +57,11 @@
      <Compile Include="Assets\Scripts\FartSpawn.cs" />
      <Compile Include="Assets\Scripts\FillAir.cs" />
      <Compile Include="Assets\Scripts\FlipIt.cs" />
+     <Compile Include="Assets\Scripts\GameOver.cs" />
      <Compile Include="Assets\Scripts\Guncarl.cs" />
      <Compile Include="Assets\Scripts\Health.cs" />
      <Compile Include="Assets\Scripts\HealthScript.cs" />
+     <Compile Include="Assets\Scripts\MainScreen.cs" />
      <Compile Include="Assets\Scripts\Parallax.cs" />
      <Compile Include="Assets\Scripts\Pickup.cs" />
      <Compile Include="Assets\Scripts\PlayerControl.cs" />
