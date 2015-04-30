@@ -2,9 +2,9 @@
 using System.Collections;
 
 public class leftrightbottom : MonoBehaviour {
-	public Transform bulletPrefab;
+	//public Transform bulletPrefab;
 	void Start() {
-		Transform bullet = Instantiate(bulletPrefab) as Transform;
+		//Transform bullet = Instantiate(bulletPrefab) as Transform;
 		//Physics2D.IgnoreCollision(bullet.GetComponent<Collider2D>(), GetComponent<Collider2D>());
 	}
 	
