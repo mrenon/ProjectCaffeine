@@ -82,8 +82,8 @@ public class score : MonoBehaviour {
 	void OnGUI() {
 		// left/right, up/down
 		GUIStyle myStyle = new GUIStyle();
-		myStyle.fontSize = 40;
+		myStyle.fontSize = 30;
 		GUI.contentColor = Color.white;
-		GUI.Label (new Rect (580, 0, 150, 100), " " + fishTotal, myStyle);
+		GUI.Label (new Rect (415, 5, 150, 100), " " + fishTotal, myStyle);
 	}
 }
