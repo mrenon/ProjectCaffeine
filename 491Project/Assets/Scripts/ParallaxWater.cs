@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Parallax : MonoBehaviour {
+public class ParallaxWater : MonoBehaviour {
 
 	public float speed = 0;
 	// Use this for initialization
@@ -26,7 +26,7 @@ public class Parallax : MonoBehaviour {
 		speed = 0f;
 		GetComponent<Renderer>().material.mainTextureOffset += new Vector2 (Time.deltaTime * speed, 0f);
 		yield return new WaitForSeconds(12.0f);
-		speed = 0.04f;
+		speed = 0.03f;
 		GetComponent<Renderer>().material.mainTextureOffset += new Vector2 (Time.deltaTime * speed, 0f);
 	}
 }

@@ -62,7 +62,8 @@
      <Compile Include="Assets\Scripts\Health.cs" />
      <Compile Include="Assets\Scripts\HealthScript.cs" />
      <Compile Include="Assets\Scripts\MainScreen.cs" />
-     <Compile Include="Assets\Scripts\Parallax.cs" />
+     <Compile Include="Assets\Scripts\ParallaxSky.cs" />
+     <Compile Include="Assets\Scripts\ParallaxWater.cs" />
      <Compile Include="Assets\Scripts\Pickup.cs" />
      <Compile Include="Assets\Scripts\PlayerControl.cs" />
      <Compile Include="Assets\Scripts\Respawn.cs" />
