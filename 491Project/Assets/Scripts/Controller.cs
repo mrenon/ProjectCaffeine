@@ -76,7 +76,7 @@ public class Controller : MonoBehaviour {
 			//GUI.Label (new Rect (38, 280, 150, 100), "GAME OVER. NO AIR!", myStyle);
 			Application.LoadLevel("GameOver");
 		} else if (currentHealth > 0 && currentHealth <= 30) {
-			playBitch();
+			//playBitch();
 			BlinkAlert();
 		} 
 	}
@@ -227,6 +227,7 @@ public class Controller : MonoBehaviour {
 
 	IEnumerator DoBlinks2(float blinkTime)
 	{
+		playBitch ();
 		alertRenderer.enabled = !alertRenderer.enabled;
 		yield return new WaitForSeconds(blinkTime);
 		alertRenderer.enabled = true;
@@ -238,13 +239,15 @@ public class Controller : MonoBehaviour {
 
 	void playBitch()
 	{
-		StartCoroutine (playAlert (alertSound)); 
+		StartCoroutine (playAlert (alertSound, 3.0f)); 
 	}
-	IEnumerator playAlert(AudioSource clip)
+
+	IEnumerator playAlert(AudioSource clip, float delay)
 	{
-		yield return new WaitForSeconds (3.0f);
+		yield return new WaitForSeconds (delay);
 		clip.Play ();
 	}
+
 	IEnumerator CoolDownDmg()
 	{
 		onCD = true;
