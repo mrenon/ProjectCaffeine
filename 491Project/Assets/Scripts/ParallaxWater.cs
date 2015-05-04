@@ -4,7 +4,6 @@ using System.Collections;
 public class ParallaxWater : MonoBehaviour {
 
 	public float speed = 0;
-	public float hiddenTime;
 
 	// Use this for initialization
 	void Start () {
@@ -13,24 +12,19 @@ public class ParallaxWater : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		hiddenTime -= Time.deltaTime;
 
-		if (hiddenTime > 0) {
-			GetComponent<Renderer>().material.mainTextureOffset += new Vector2 (Time.deltaTime * speed, 0f);
-		}
-		else if (hiddenTime <= 0) {
-			PauseScroll ();
-		} 
+			GetComponent<Renderer>().material.mainTextureOffset = new Vector2 (Time.time * speed, 0f);
+
 		//PauseScroll ();
 		//GetComponent<Renderer>().material.mainTextureOffset = new Vector2 (Time.time * speed, 0f);
 
 	}
-	void PauseScroll()
+	/*void PauseScroll()
 	{
 
 			StartCoroutine (PauseTime (1.0f)); 
 
-	}
+	} */
 	
 	/*IEnumerator PauseTime(float blinkTime)
 	{
@@ -42,7 +36,7 @@ public class ParallaxWater : MonoBehaviour {
 		speed = 0.03f;
 		GetComponent<Renderer>().material.mainTextureOffset += new Vector2 (Time.deltaTime * speed, 0f);
 	}*/
-	IEnumerator PauseTime(float blinkTime)
+	/*IEnumerator PauseTime(float blinkTime)
 	{
 		speed = 0f;
 		GetComponent<Renderer>().material.mainTextureOffset += new Vector2 (Time.deltaTime * speed, 0f);
@@ -50,5 +44,5 @@ public class ParallaxWater : MonoBehaviour {
 		speed = 0.015f;
 		GetComponent<Renderer>().material.mainTextureOffset += new Vector2 (Time.deltaTime * speed, 0f);
 		hiddenTime = 20.0f;
-	}
+	}*/
 }

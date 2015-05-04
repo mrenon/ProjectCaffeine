@@ -1,5 +1,10 @@
 ﻿// Variable to store the enemy prefab
 public var enemy : GameObject;
+public var nightenemy : GameObject;
+public var timer : float;
+var tempenemy : GameObject;
+var tempnight : GameObject;
+
 
 // Variable to know how fast we should create new enemies
 public var spawnTime : float = 0;
@@ -9,8 +14,24 @@ function Start() {
     // Call the 'addEnemy' function every 'spawnTime' seconds
     number = Random.Range(5,9);
     InvokeRepeating("addEnemy", number, number);
+    tempenemy = enemy;
+	tempnight = nightenemy;
 }
 
+function Update() {
+
+	timer -= Time.deltaTime;
+	if(timer <= 0) {
+		enemy = tempnight;
+	}
+	
+	if(timer <= -35) {
+		while(timer <= 0) {
+			timer += 90;
+			enemy = tempenemy;
+		}
+	}
+}
 
 function FixedUpdate() {
 	number = Random.Range(5,9);
