@@ -13,7 +13,7 @@ public class Controller : MonoBehaviour {
 	private float minXValue;
 	private float maxXvalue;
 	public int currentHealth;
-	public Text alertText;
+	//public Text alertText;
 
 	public float timeRemaining = 99999;
 	private bool alertactive = true;
@@ -85,7 +85,7 @@ public class Controller : MonoBehaviour {
 	void Start()
 	{
 		//alert.SetActive(false);
-		alertText.enabled = false;
+	//	alertText.enabled = false;
 		alertRenderer.enabled = !alertRenderer.enabled;
 		onCD = false;
 		cachedY = healthTransform.position.y;
