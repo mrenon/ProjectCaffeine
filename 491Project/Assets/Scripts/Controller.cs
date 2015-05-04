@@ -12,7 +12,7 @@ public class Controller : MonoBehaviour {
 	private float minXValue;
 	private float maxXvalue;
 	public int currentHealth;
-	float timeRemaining = 70;
+	public float timeRemaining = 99999;
 	public int score; // player score
 	bool turnOffTimer = true;
 	bool damaged;

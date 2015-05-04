@@ -4,19 +4,23 @@ using System.Collections;
 public class ParallaxWater : MonoBehaviour {
 
 	public float speed = 0;
+	Controller contPause = new Controller();
+
 	// Use this for initialization
 	void Start () {
-	
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		//GetComponent<Renderer>().material.mainTextureOffset = new Vector2 (Time.time * speed, 0f);
+		GetComponent<Renderer>().material.mainTextureOffset = new Vector2 (Time.time * speed, 0f);
 		PauseScroll ();
 	}
 	void PauseScroll()
 	{
-		StartCoroutine (PauseTime (14.0f)); 
+		if (contPause.timeRemaining == 99990) {
+			StartCoroutine (PauseTime (1)); 
+		}
 	}
 	
 	IEnumerator PauseTime(float blinkTime)
