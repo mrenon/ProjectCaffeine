@@ -1,10 +1,12 @@
 fileFormatVersion: 2
 guid: 1b49f293ff8c5471f8a0ea4d0c3239f5
-timeCreated: 1427374060
+timeCreated: 1430694088
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - skin: {fileID: 11400000, guid: 636d0d049017347fea3d3a516d3fedda, type: 2}
+  - myFont: {fileID: 12800000, guid: 6635885cc28b7492c9585e17294aaf67, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

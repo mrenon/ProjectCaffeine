@@ -3,7 +3,10 @@ using System.Collections;
 
 public class score : MonoBehaviour {
 
-	public int fishTotal = 0;
+	private int fishTotal;
+	private string complete = "";
+	//public Rect position = new Rect(415, 5, 150, 100);
+	public GUIStyle style = null;
 
 	// Use this for initialization
 	void Start () {
@@ -80,10 +83,12 @@ public class score : MonoBehaviour {
 	}
 
 	void OnGUI() {
+		complete = " " + fishTotal;
 		// left/right, up/down
-		GUIStyle myStyle = new GUIStyle();
-		myStyle.fontSize = 30;
-		GUI.contentColor = Color.white;
-		GUI.Label (new Rect (415, 5, 150, 100), " " + fishTotal, myStyle);
+		//style.font = myFont;
+		//style.fontSize = 30;
+		//GUI.contentColor = Color.white;
+		//GUI.Label (new Rect (415, 5, 150, 100), " " + fishTotal, style);
+		GUI.Label (new Rect (415, 7, 150, 100), complete, style);
 	}
 }

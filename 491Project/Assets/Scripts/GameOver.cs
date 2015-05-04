@@ -16,10 +16,10 @@ public class GameOver : MonoBehaviour {
 	void OnGUI()
 	{
 		GUI.backgroundColor = Color.clear;
-		if (GUI.Button (new Rect (70, Screen.height/2 - 120, 200, 100), "")) {
+		if (GUI.Button (new Rect (50, Screen.height/2 - 100, 130, 100), "")) {
 			Application.LoadLevel("Whale");
 		}
-		else if (GUI.Button (new Rect (690, Screen.height/2 - 120, 200, 100), "")) {
+		else if (GUI.Button (new Rect (760, Screen.height/2 - 100, 130, 100), "")) {
 			Application.LoadLevel("MainScreen");
 		}
 	}
