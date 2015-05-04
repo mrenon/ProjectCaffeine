@@ -1,12 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Controller.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/spawnScriptBoat.js">
     <Files>
-      <File FileName="Assets/Scripts/score.cs" Line="92" Column="30" />
-      <File FileName="Assets/Scripts/Controller.cs" Line="231" Column="3" />
-      <File FileName="Assets/Scripts/DestroyAir.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/ParallaxWater.cs" Line="6" Column="25" />
-      <File FileName="Assets/Scripts/GameOver.cs" Line="16" Column="14" />
+      <File FileName="Assets/Scripts/spawnScriptBoat.js" Line="11" Column="28" />
+      <File FileName="Assets/Scripts/score.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Controller.cs" Line="249" Column="19" />
+      <File FileName="Assets/Scripts/DestroyAir.cs" Line="49" Column="45" />
+      <File FileName="Assets/Scripts/ParallaxWater.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GameOver.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/ShotScript.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/countDownTImer.cs" Line="1" Column="1" />
     </Files>
