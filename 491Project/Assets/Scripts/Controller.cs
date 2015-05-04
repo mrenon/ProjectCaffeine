@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class Controller : MonoBehaviour {
 	
 	public float maxSpeed;
+	//public 
 	public bool facingRight = false;
 	public bool facingUp = false;
 	public RectTransform healthTransform;
@@ -12,8 +13,13 @@ public class Controller : MonoBehaviour {
 	private float minXValue;
 	private float maxXvalue;
 	public int currentHealth;
+<<<<<<< HEAD
 	public float timeRemaining = 99999;
 	public int score; // player score
+=======
+	float timeRemaining = 70;
+	private int score = 0; // player score
+>>>>>>> origin/David
 	bool turnOffTimer = true;
 	bool damaged;
 	public GameObject alert;
