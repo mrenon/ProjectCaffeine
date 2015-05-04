@@ -14,6 +14,7 @@ public class Controller : MonoBehaviour {
 	private float maxXvalue;
 	public int currentHealth;
 	//public Text alertText;
+	public AudioSource alertSound;
 
 	public float timeRemaining = 99999;
 	private bool alertactive = true;
@@ -47,6 +48,7 @@ public class Controller : MonoBehaviour {
 	public float flashSpeed = 5f;
 	Color[] colors = new Color[] {Color.white, Color.red, Color.green, Color.blue};
 	private int currentColor,length;
+	private bool keepPlaying = true;
 
 
 	void OnGUI() {
@@ -74,12 +76,8 @@ public class Controller : MonoBehaviour {
 			//GUI.Label (new Rect (38, 280, 150, 100), "GAME OVER. NO AIR!", myStyle);
 			Application.LoadLevel("GameOver");
 		} else if (currentHealth > 0 && currentHealth <= 30) {
+			playBitch();
 			BlinkAlert();
-			//
-			// RENON!!!!!
-			//  PUT CODE HERE!!!
-			//
-			//
 		} 
 	}
 	void Start()
@@ -224,23 +222,29 @@ public class Controller : MonoBehaviour {
 
 	void BlinkAlert()
 	{
-		StartCoroutine (DoBlinks2 (1.0f)); 
-
+		StartCoroutine (DoBlinks2 (3.0f)); 
 	}
 
 	IEnumerator DoBlinks2(float blinkTime)
 	{
-		//alertText.enabled = true;
 		alertRenderer.enabled = !alertRenderer.enabled;
 		yield return new WaitForSeconds(blinkTime);
 		alertRenderer.enabled = true;
 		alert.SetActive(true);
 		yield return new WaitForSeconds(blinkTime);
-		//alertText.enabled = false;
 		alertRenderer.enabled = !alertRenderer.enabled;
 		alert.SetActive(false);
 	}
-	
+
+	void playBitch()
+	{
+		StartCoroutine (playAlert (alertSound)); 
+	}
+	IEnumerator playAlert(AudioSource clip)
+	{
+		yield return new WaitForSeconds (3.0f);
+		clip.Play ();
+	}
 	IEnumerator CoolDownDmg()
 	{
 		onCD = true;
