@@ -27,7 +27,7 @@ function Update() {
 	
 	if(timer <= -35) {
 		while(timer <= 0) {
-			timer += 90;
+			timer += 61;
 			enemy = tempenemy;
 		}
 	}
