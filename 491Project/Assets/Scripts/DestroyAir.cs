@@ -25,6 +25,16 @@ public class DestroyAir : MonoBehaviour {
 			Destroy (col.gameObject);
 			//	fishTotal = fishTotal + 1;
 		}
+		if (col.gameObject.tag == "Pink_Jelly") {
+			//Physics2D.IgnoreCollision(col.collider, GetComponent<Collider2D>());
+			Destroy (col.gameObject);
+			//	fishTotal = fishTotal + 1;
+		}
+		if (col.gameObject.tag == "Green_Jelly") {
+			//Physics2D.IgnoreCollision(col.collider, GetComponent<Collider2D>());
+			Destroy (col.gameObject);
+			//	fishTotal = fishTotal + 1;
+		}
 		if (col.gameObject.tag == "urchin") {
 			Destroy (col.gameObject);
 		}
@@ -53,11 +63,18 @@ public class DestroyAir : MonoBehaviour {
 		if (collider.gameObject.tag == "fish") {
 			Destroy (collider.gameObject);
 		}
-		if (collider.gameObject.tag == "Green_fish") {
+		if (collider.gameObject.tag == "Green_Fish") {
 			Destroy (collider.gameObject);
 		}
 		if (collider.gameObject.tag == "jellyfishgreen") {
 			Destroy (collider.gameObject);
 		}
+		if (collider.gameObject.tag == "Green_Jelly") {
+			Destroy (collider.gameObject);
+		}
+		if (collider.gameObject.tag == "Pink_Jelly") {
+			Destroy (collider.gameObject);
+		}
+
 	}
 }
