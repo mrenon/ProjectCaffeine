@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class Controller : MonoBehaviour {
 	
 	public float maxSpeed;
+	public AudioClip[] sounds;
 	//public 
 	public bool facingRight = false;
 	public bool facingUp = false;
@@ -13,8 +14,7 @@ public class Controller : MonoBehaviour {
 	private float minXValue;
 	private float maxXvalue;
 	public int currentHealth;
-	//public Text alertText;
-	public AudioSource alertSound;
+	private string whale = "Whale";
 
 	public float timeRemaining = 99999;
 	private bool alertactive = true;
@@ -49,7 +49,9 @@ public class Controller : MonoBehaviour {
 	Color[] colors = new Color[] {Color.white, Color.red, Color.green, Color.blue};
 	private int currentColor,length;
 	private bool keepPlaying = true;
-
+	//public AudioClip[] sounds = new AudioClip[0];
+	//private int audioID = 0;
+	//private int audioLength = 0;
 
 	void OnGUI() {
 
@@ -75,8 +77,7 @@ public class Controller : MonoBehaviour {
 			turnOffTimer = false;
 			//GUI.Label (new Rect (38, 280, 150, 100), "GAME OVER. NO AIR!", myStyle);
 			Application.LoadLevel("GameOver");
-		} else if (currentHealth > 0 && currentHealth <= 30) {
-			//playBitch();
+		} else if (currentHealth <= 25) {
 			BlinkAlert();
 		} 
 	}
@@ -84,12 +85,14 @@ public class Controller : MonoBehaviour {
 	{
 		//alert.SetActive(false);
 	//	alertText.enabled = false;
+		PlayerPrefs.SetString("Whale","Whale");
 		alertRenderer.enabled = !alertRenderer.enabled;
 		onCD = false;
 		cachedY = healthTransform.position.y;
 		maxXvalue = healthTransform.position.x;
 		minXValue = healthTransform.position.x - healthTransform.rect.width * canvas.scaleFactor;
 		currentHealth = maxHealth;
+
 		
 	}
 	
@@ -129,7 +132,11 @@ public class Controller : MonoBehaviour {
 		}
 		
 		if (Input.GetKeyDown (KeyCode.Space)) {
-			fart.Play();
+			//fart.Play();
+			AudioSource audio = GetComponent<AudioSource>();
+			audio.clip = sounds[Random.Range (0,5)];
+			audio.pitch = Random.Range (1.1f,1.5f);
+			audio.Play();
 			if(!onCD && currentHealth > 0)
 			{
 				//StartCoroutine(CoolDownDmg());
@@ -145,6 +152,7 @@ public class Controller : MonoBehaviour {
 			Flip();
 		
 	}
+
 
 	void OnCollisionEnter2D(Collision2D col)
 	{
@@ -227,7 +235,6 @@ public class Controller : MonoBehaviour {
 
 	IEnumerator DoBlinks2(float blinkTime)
 	{
-		playBitch ();
 		alertRenderer.enabled = !alertRenderer.enabled;
 		yield return new WaitForSeconds(blinkTime);
 		alertRenderer.enabled = true;
@@ -235,17 +242,6 @@ public class Controller : MonoBehaviour {
 		yield return new WaitForSeconds(blinkTime);
 		alertRenderer.enabled = !alertRenderer.enabled;
 		alert.SetActive(false);
-	}
-
-	void playBitch()
-	{
-		StartCoroutine (playAlert (alertSound, 3.0f)); 
-	}
-
-	IEnumerator playAlert(AudioSource clip, float delay)
-	{
-		yield return new WaitForSeconds (delay);
-		clip.Play ();
 	}
 
 	IEnumerator CoolDownDmg()
