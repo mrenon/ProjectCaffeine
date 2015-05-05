@@ -89,6 +89,6 @@ public class score : MonoBehaviour {
 		//style.fontSize = 30;
 		//GUI.contentColor = Color.white;
 		//GUI.Label (new Rect (415, 5, 150, 100), " " + fishTotal, style);
-		GUI.Label (new Rect (415, 7, 150, 100), complete, style);
+		GUI.Label (new Rect (515, 11, 150, 100), complete, style);
 	}
 }

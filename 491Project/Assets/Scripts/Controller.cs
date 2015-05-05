@@ -55,7 +55,7 @@ public class Controller : MonoBehaviour {
 
 			if (turnOffTimer) {
 			if (timeRemaining > 0) {
-				GUI.Label (new Rect (125, 30, 150, 100), "" + (int)timeRemaining);
+				//GUI.Label (new Rect (125, 30, 150, 100), "" + (int)timeRemaining);
 			} else {
 				GUIStyle myStyle = new GUIStyle();
 				myStyle.fontSize = 40;
@@ -105,7 +105,7 @@ public class Controller : MonoBehaviour {
 		else if (currentHealth > 0 && currentHealth <= 30) {
 		}
 
-		timeRemaining -= Time.deltaTime;
+		//timeRemaining -= Time.deltaTime;
 		Controller cont = gameObject.GetComponent<Controller>();
 		if (cont.currentHealth <= 0) {
 			GUI.Label (new Rect (250, 300, 150, 100), "GAME OVER!");

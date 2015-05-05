@@ -17,7 +17,7 @@ public class MainScreen : MonoBehaviour {
 	{
 		GUI.backgroundColor = Color.clear;
 		if (GUI.Button (new Rect (60, Screen.height/2 + 280, 850, 80), "")) {
-			Application.LoadLevel("Whale");
+			Application.LoadLevel(0);
 		}
 	}
 }
