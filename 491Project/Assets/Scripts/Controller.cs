@@ -5,7 +5,8 @@ using UnityEngine.UI;
 public class Controller : MonoBehaviour {
 	
 	public float maxSpeed;
-	public AudioClip[] sounds;
+	public AudioClip[] fartsounds;
+	public AudioClip[] hurtsounds;
 	//public 
 	public bool facingRight = false;
 	public bool facingUp = false;
@@ -49,9 +50,6 @@ public class Controller : MonoBehaviour {
 	Color[] colors = new Color[] {Color.white, Color.red, Color.green, Color.blue};
 	private int currentColor,length;
 	private bool keepPlaying = true;
-	//public AudioClip[] sounds = new AudioClip[0];
-	//private int audioID = 0;
-	//private int audioLength = 0;
 
 	void OnGUI() {
 
@@ -134,7 +132,7 @@ public class Controller : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.Space)) {
 			//fart.Play();
 			AudioSource audio = GetComponent<AudioSource>();
-			audio.clip = sounds[Random.Range (0,5)];
+			audio.clip = fartsounds[Random.Range (0,5)];
 			audio.pitch = Random.Range (1.1f,1.5f);
 			audio.Play();
 			if(!onCD && currentHealth > 0)
@@ -174,7 +172,11 @@ public class Controller : MonoBehaviour {
 			damaged = true;
 			currentColor = (currentColor+1)%length;
 			renderer.material.color = colors[currentColor];
-			hurtWhale.Play();
+			//hurtWhale.Play();
+			AudioSource audio3 = GetComponent<AudioSource>();
+			audio3.clip = hurtsounds[Random.Range (0,5)];
+			//audio2.pitch = Random.Range (1.1f,1.5f);
+			audio3.Play();
 			CurrentHealth -= 10;
 			BlinkPlayer();
 			Destroy (col.gameObject);

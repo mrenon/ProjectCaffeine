@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\spawnScript.js" />
      <Compile Include="Assets\Scripts\spawnScriptBoat.js" />
+     <Compile Include="Assets\SpawnLeftClouds.js" />
      <None Include="Assets\AudioFiles\WF_Sounds\New Sound Items.txt" />
      <None Include="Assets\UI Fonts\WhaleFartFont\1001fonts-pw403-eula.txt" />
  <Reference Include="UnityEngine.UI">

@@ -83,6 +83,8 @@
      <Compile Include="Assets\Scripts\leftrightbottom.cs" />
      <Compile Include="Assets\Scripts\score.cs" />
      <Compile Include="Assets\Scripts\youwin.cs" />
+     <Compile Include="Assets\SpawnCloudLeft.cs" />
+     <Compile Include="Assets\StartSkyGoDown.cs" />
      <Compile Include="Assets\test.cs" />
      <None Include="Assets\AudioFiles\WF_Sounds\New Sound Items.txt" />
      <None Include="Assets\UI Fonts\WhaleFartFont\1001fonts-pw403-eula.txt" />
