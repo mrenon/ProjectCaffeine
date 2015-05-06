@@ -83,7 +83,7 @@ public class Controller : MonoBehaviour {
 	{
 		//alert.SetActive(false);
 	//	alertText.enabled = false;
-		PlayerPrefs.SetString("Whale","Whale");
+		//PlayerPrefs.SetString("Whale","Whale");
 		alertRenderer.enabled = !alertRenderer.enabled;
 		onCD = false;
 		cachedY = healthTransform.position.y;
@@ -190,7 +190,7 @@ public class Controller : MonoBehaviour {
 		healthText.text = "Air: " + currentHealth;
 		float currentXValue = MapValues (currentHealth, 0, maxHealth, minXValue, maxXvalue);
 		healthTransform.position = new Vector3 (currentXValue, cachedY);
-		
+
 		if (currentHealth > maxHealth / 2) {  // Then i have more than 50% health
 			visualHealth.color = new Color32((byte) MapValues(currentHealth, maxHealth/2, maxHealth,255,0),255,0,255);
 		} 

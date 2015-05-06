@@ -12,17 +12,15 @@ public class MainScreen : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown(KeyCode.Space))
-		{
-			Application.LoadLevel("Whale");
-		}
+
 		
 	}
 	
 	void OnGUI()
 	{
-		GUI.backgroundColor = Color.clear;
+		GUI.backgroundColor = Color.black;
 		if (GUI.Button (new Rect (60, Screen.height/2 + 280, 850, 80), "")) {
+			Application.LoadLevel("Whale");
 
 		}
 	}
