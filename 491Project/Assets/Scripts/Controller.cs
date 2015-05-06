@@ -88,7 +88,7 @@ public class Controller : MonoBehaviour {
 		onCD = false;
 		cachedY = healthTransform.position.y;
 		maxXvalue = healthTransform.position.x;
-		minXValue = healthTransform.position.x - healthTransform.rect.width * canvas.scaleFactor;
+		minXValue = healthTransform.position.x - healthTransform.rect.width * canvas.scaleFactor*2.4f; // changed THIS to make air meter to scale
 		currentHealth = maxHealth;
 
 		
