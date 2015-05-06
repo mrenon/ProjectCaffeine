@@ -13,6 +13,7 @@ public class FartAnimChange : MonoBehaviour {
 	//fish boolean variables
 	bool greenfish_hit;
 	bool orangefish_hit;
+	bool rainbowfish_hit;
 	bool fish_x2;
 	bool fish_x3;
 	bool fish_x4;
@@ -22,6 +23,19 @@ public class FartAnimChange : MonoBehaviour {
 	bool fish_x8;
 	bool fish_x9;
 	bool fish_x10;
+
+	//jelly boolean variables
+	bool greenjelly_hit;
+	bool orangejelly_hit;
+	bool jelly_x2;
+	bool jelly_x3;
+	bool jelly_x4;
+	bool jelly_x5;
+	bool jelly_x6;
+	bool jelly_x7;
+	bool jelly_x8;
+	bool jelly_x9;
+	bool jelly_x10;
 	public AudioSource fishPoint;
 	
 	// Use this for initialization
@@ -42,6 +56,13 @@ public class FartAnimChange : MonoBehaviour {
 				anim = GetComponent<Animator> ();
 				anim.SetBool ("orangefish_hit", true);
 				hitFish = anim.GetBool ("orangefish_hit");
+			}
+			if(col.gameObject.tag == "Rainbow_Fish"){
+				fishPoint.Play();
+				fishCounter++;
+				anim = GetComponent<Animator> ();
+				anim.SetBool ("rainbowfish_hit", true);
+				hitFish = anim.GetBool ("rainbowfish_hit");
 			}
 			if(col.gameObject.tag == "Green_Fish"){
 				fishPoint.Play();
@@ -66,7 +87,7 @@ public class FartAnimChange : MonoBehaviour {
 			}
 		}
 		else if(fishCounter == 1){
-			if(col.gameObject.tag == "fish" || col.gameObject.tag == "Green_Fish"){
+			if(col.gameObject.tag == "fish" || col.gameObject.tag == "Green_Fish" || col.gameObject.tag == "Rainbow_Fish"){
 				fishPoint.Play();
 				fishCounter++;
 				anim = GetComponent<Animator> ();
@@ -82,7 +103,7 @@ public class FartAnimChange : MonoBehaviour {
 			}
 		}
 		else if(fishCounter == 2){
-			if(col.gameObject.tag == "fish" || col.gameObject.tag == "Green_Fish"){
+			if(col.gameObject.tag == "fish" || col.gameObject.tag == "Green_Fish" || col.gameObject.tag == "Rainbow_Fish"){
 				fishPoint.Play();
 				fishCounter++;
 				anim = GetComponent<Animator> ();
@@ -98,7 +119,7 @@ public class FartAnimChange : MonoBehaviour {
 			}
 		}
 		else if(fishCounter == 3){
-			if(col.gameObject.tag == "fish" || col.gameObject.tag == "Green_Fish"){
+			if(col.gameObject.tag == "fish" || col.gameObject.tag == "Green_Fish" || col.gameObject.tag == "Rainbow_Fish"){
 				fishPoint.Play();
 				fishCounter++;
 				anim = GetComponent<Animator> ();
@@ -114,7 +135,7 @@ public class FartAnimChange : MonoBehaviour {
 			}
 		}
 		else if(fishCounter == 4){
-			if(col.gameObject.tag == "fish" || col.gameObject.tag == "Green_Fish"){
+			if(col.gameObject.tag == "fish" || col.gameObject.tag == "Green_Fish" || col.gameObject.tag == "Rainbow_Fish"){
 				fishPoint.Play();
 				fishCounter++;
 				anim = GetComponent<Animator> ();
@@ -130,7 +151,7 @@ public class FartAnimChange : MonoBehaviour {
 			}
 		}
 		else if(fishCounter == 5){
-			if(col.gameObject.tag == "fish" || col.gameObject.tag == "Green_Fish"){
+			if(col.gameObject.tag == "fish" || col.gameObject.tag == "Green_Fish" || col.gameObject.tag == "Rainbow_Fish"){
 				fishPoint.Play();
 				fishCounter++;
 				anim = GetComponent<Animator> ();
@@ -146,7 +167,7 @@ public class FartAnimChange : MonoBehaviour {
 			}
 		}
 		else if(fishCounter == 6){
-			if(col.gameObject.tag == "fish" || col.gameObject.tag == "Green_Fish"){
+			if(col.gameObject.tag == "fish" || col.gameObject.tag == "Green_Fish" || col.gameObject.tag == "Rainbow_Fish"){
 				fishPoint.Play();
 				fishCounter++;
 				anim = GetComponent<Animator> ();
@@ -162,7 +183,7 @@ public class FartAnimChange : MonoBehaviour {
 			}
 		}
 		else if(fishCounter == 7){
-			if(col.gameObject.tag == "fish" || col.gameObject.tag == "Green_Fish"){
+			if(col.gameObject.tag == "fish" || col.gameObject.tag == "Green_Fish" || col.gameObject.tag == "Rainbow_Fish"){
 				fishPoint.Play();
 				fishCounter++;
 				anim = GetComponent<Animator> ();
@@ -178,7 +199,7 @@ public class FartAnimChange : MonoBehaviour {
 			}
 		}
 		else if(fishCounter == 8){
-			if(col.gameObject.tag == "fish" || col.gameObject.tag == "Green_Fish"){
+			if(col.gameObject.tag == "fish" || col.gameObject.tag == "Green_Fish" || col.gameObject.tag == "Rainbow_Fish"){
 				fishPoint.Play();
 				fishCounter++;
 				anim = GetComponent<Animator> ();
@@ -194,7 +215,7 @@ public class FartAnimChange : MonoBehaviour {
 			}
 		}
 		else if(fishCounter == 9){
-			if(col.gameObject.tag == "fish" || col.gameObject.tag == "Green_Fish"){
+			if(col.gameObject.tag == "fish" || col.gameObject.tag == "Green_Fish" || col.gameObject.tag == "Rainbow_Fish"){
 				fishPoint.Play();
 				fishCounter++;
 				anim = GetComponent<Animator> ();
