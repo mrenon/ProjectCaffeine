@@ -25,10 +25,10 @@ function Update() {
 		enemy = tempnight;
 	}
 	
-	if(timer <= -35) {
+	if(timer <= -60) { // was 35
 		while(timer <= 0) {
 
-			timer += 67;
+			timer += 120; // was 67
 
 			enemy = tempenemy;
 		}
