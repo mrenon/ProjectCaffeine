@@ -12,7 +12,7 @@ public class SpawnCloudLeft : MonoBehaviour {
 
 	void BlinkPlayer()
 	{
-		StartCoroutine (DoBlinks (49f));
+		StartCoroutine (DoBlinks (104f)); // was 49
 	}
 	
 	IEnumerator DoBlinks(float blinkTime)

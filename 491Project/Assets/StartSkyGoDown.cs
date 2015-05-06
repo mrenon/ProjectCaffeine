@@ -12,7 +12,7 @@ public class StartSkyGoDown : MonoBehaviour {
 	
 	void BlinkPlayer()
 	{
-		StartCoroutine (DoBlinks (9f));
+		StartCoroutine (DoBlinks (25f)); // was 9 
 		this.transform.Translate(Vector2.up * Time.deltaTime * 0);
 	}
 	

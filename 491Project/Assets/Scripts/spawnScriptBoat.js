@@ -21,7 +21,7 @@ function Start() {
 
 }
 
-function Update() {
+function Update() { // timer in inspector WAS 1
 
 	timer -= Time.deltaTime;
 	if(timer <= 0) {
@@ -33,11 +33,11 @@ function Update() {
 		}
 	}
 	
-	if(timer <= -35) {
+	if(timer <= -65) { // was 35
 		while(timer <= 0) {
 		
 			
-			timer += 67;
+			timer += 122; // was 67
 			enemy = tempenemy;
 			check = 1;
 		}
